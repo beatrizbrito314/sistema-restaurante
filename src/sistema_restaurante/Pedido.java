@@ -30,10 +30,6 @@ public class Pedido {
 	public void adicionarItem(Item item) {
 	    listaItens.add(item);
 	}
-
-	public void removerItem(Item item) {
-	    listaItens.remove(item);
-	}
 	public Double totalPreco(ArrayList<Item> listaItens) {
 		Double total=0.0;
 		for (Item i:listaItens ) {

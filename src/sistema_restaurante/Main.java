@@ -10,13 +10,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<Pedido> listaPedidos = new ArrayList<>();
         ArrayList<Item> listaItens = new ArrayList<>();
+        boolean validarWhile=true;
 
-        while (true) {
+        while (validarWhile) {
             System.out.println("=======Qual operação deseja realizar?=======");
-            System.out.println("(0) Adicionar pedido");
-            System.out.println("(1) Remover pedido");
-            System.out.println("(2) Visualizar relatório de pedidos");
-            System.out.println("(3) Sair");
+            System.out.println("Adicionar pedido (0)");
+            System.out.println("Remover pedido (1)");
+            System.out.println("Visualizar relatório de pedidos (2)");
+            System.out.println("Sair (3)");
             System.out.println("============================================");
 
             int validarPedido = sc.nextInt();
@@ -94,17 +95,13 @@ public class Main {
                     for (Pedido p : listaPedidos) {
                         relatorio.exibirRelatorio(p);
                     }
-                    
                     break;
-
+                    
                 case 3: // SAIR
                     System.out.println("Encerrando o sistema...");
-                    sc.close();
-                    return;
-
-                default:
-                    System.out.println("Opção inválida!");
+                    validarWhile=false;
             }
         }
+
     }
 }

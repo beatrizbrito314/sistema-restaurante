@@ -100,7 +100,14 @@ public class Main {
                 case 3: // SAIR
                     System.out.println("Encerrando o sistema...");
                     validarWhile=false;
+                    break; 
+                    
+                default:
+        	        System.out.println("Opção inválida! Digite 0, 1, 2 ou 3.");
+        	        break;
             }
+            	
+            	    
         }
 
     }
